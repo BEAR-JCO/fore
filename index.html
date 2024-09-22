@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower</title>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flower {
+            height: 20vw;
+            width: 20vw;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #000;
+            animation: pulsate 2s infinite;
+        }
+
+        .text-above,
+        .text-below {
+            position: absolute;
+            text-align: center;
+            color: #fff;
+            font-size: 3vw;
+        }
+
+        .text-above {
+            top: -6vw;
+        }
+
+        .text-below {
+            bottom: -6vw;
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(1.5);
+            }
+            50% {
+                transform: scale(1.6);
+            }
+            100% {
+                transform: scale(1.5);
+            }
+        }
+
+        .mid {
+            width: 5vw;
+            height: 5vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, #000, #ff5e00, #000);
+            z-index: 4;
+            background-size: 5px 5px;
+            filter: drop-shadow(0 0 8px #682600);
+        }
+
+        .Petal1 {
+            position: absolute;
+            left: 4vw;
+            z-index: 3;
+            width: 12vw;
+            height: 3vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff5e00, #ffbb00);
+            filter: drop-shadow(0 0 5px #e05200);
+        }
+
+        .Petal1.p1 {
+            transform: rotate(22.5deg);
+        }
+
+        .Petal1.p2 {
+            transform: rotate(67.5deg);
+        }
+
+        .Petal1.p3 {
+            transform: rotate(110.5deg);
+        }
+
+        .Petal1.p4 {
+            transform: rotate(157.5deg);
+        }
+
+        .Petal2 {
+            position: absolute;
+            left: 0;
+            z-index: 2;
+            width: 20vw;
+            height: 4vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff5e00, #fbd702);
+            filter: drop-shadow(0 0 5px #e05200);
+        }
+
+        .Petal2.p1 { }
+        .Petal2.p2 {
+            transform: rotate(90deg);
+        }
+        .Petal2.p3 {
+            transform: rotate(45deg);
+        }
+        .Petal2.p4 {
+            transform: rotate(135deg);
+        }
+
+        .Petal3 {
+            position: absolute;
+            left: 0px;
+            z-index: 1;
+            width: 20vw;
+            height: 4vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff5e00, #fbd702);
+            filter: drop-shadow(0 0 2px #fbd702);
+        }
+
+        .Petal3.p1 {
+            transform: rotate(22.5deg);
+        }
+        .Petal3.p2 {
+            transform: rotate(67.5deg);
+        }
+        .Petal3.p3 {
+            transform: rotate(110.5deg);
+        }
+        .Petal3.p4 {
+            transform: rotate(157.5deg);
+        }
+
+        /* Media queries for smaller screens */
+        @media (max-width: 768px) {
+            .flower {
+                height: 40vw;
+                width: 40vw;
+            }
+
+            .text-above,
+            .text-below {
+                font-size: 6vw;
+            }
+
+            .mid {
+                width: 10vw;
+                height: 10vw;
+            }
+
+            .Petal1 {
+                width: 24vw;
+                height: 6vw;
+            }
+
+            .Petal2,
+            .Petal3 {
+                width: 40vw;
+                height: 8vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="flower">
+    <div class="text-above">De BEAR</div>
+    <div class="mid"></div>
+    <div class="Petal1 p1"></div>
+    <div class="Petal1 p2"></div>
+    <div class="Petal1 p3"></div>
+    <div class="Petal1 p4"></div>
+    <div class="Petal2 p1"></div>
+    <div class="Petal2 p2"></div>
+    <div class="Petal2 p3"></div>
+    <div class="Petal2 p4"></div>
+    <div class="Petal3 p1"></div>
+    <div class="Petal3 p2"></div>
+    <div class="Petal3 p3"></div>
+    <div class="Petal3 p4"></div>
+    <div class="text-below">Para Elia</div>
+</div>
+
+</body>
+</html>
